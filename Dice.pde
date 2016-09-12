@@ -5,12 +5,12 @@ void setup()
 }
 void draw()
 {
-	Die one = new Die(5,5);
-	Die two = new Die(100,100);
-	one.roll();
+	Die one = new Die(200,225);
+	Die two = new Die(260,225);
 	one.show();
-
 	two.show();
+	one.roll();
+	two.roll();
 }
 void mousePressed()
 {
@@ -19,18 +19,52 @@ void mousePressed()
 class Die //models one single dice cube
 {
 	int roll, dX, dY;
+
 	//variable declarations here
 	Die(int x, int y) //constructor
 	{
 		dX=x;
 		dY=y;
-		roll=1;
+		roll=4;
 		//roll=(int)(Math.random()*7+1)
 	}
 	void roll()
 	{
-		fill(255);
-		if(roll == 1){ellipse(dX+25,dY-25,10,10);}
+		if (roll==1)
+		{
+			fill(255);
+			ellipse(dX+25,dY+25,10,10);
+		}
+		if (roll==2)
+		{
+			fill(255);
+			ellipse(dX+10,dY+10,10,10);
+			ellipse(dX+40,dY+40,10,10);
+		}
+		if (roll==3)
+		{
+			fill(255);
+			ellipse(dX+10,dY+10,10,10);
+			ellipse(dX+25,dY+25,10,10);
+			ellipse(dX+40,dY+40,10,10);
+		}
+		if (roll==4)
+		{
+			fill(255);
+			ellipse(dX+10,dY+10,10,10);
+			ellipse(dX+10,dY+40,10,10);
+			ellipse(dX+40,dY+40,10,10);
+			ellipse(dX+40,dY+10,10,10);
+		}
+		if (roll==4)
+		{
+			fill(255);
+			ellipse(dX+10,dY+10,10,10);
+			ellipse(dX+10,dY+40,10,10);
+			ellipse(dX+40,dY+40,10,10);
+			ellipse(dX+40,dY+10,10,10);
+		}
+		
 	}
 	void show()
 	{
