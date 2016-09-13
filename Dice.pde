@@ -12,12 +12,10 @@ void draw()
 		{
 			Die one = new Die(x,y);
 			one.show();
-			one.roll();
+			one.work();
 		}
 	
-	}
-	
-}
+	}}
 void mousePressed()
 {
 	redraw();
@@ -33,7 +31,7 @@ class Die //models one single dice cube
 		dY=y;
 		num=(int)(Math.random()*6+1);
 	}
-	void roll()
+	void work()
 	{	
 		if (num==1)
 		{
