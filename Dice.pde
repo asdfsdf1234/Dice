@@ -24,36 +24,36 @@ void mousePressed()
 }
 class Die //models one single dice cube
 {
-	int roll, dX, dY;
+	int num, dX, dY;
 
 	//variable declarations here
 	Die(int x, int y) //constructor
 	{
 		dX=x;
 		dY=y;
-		roll=(int)(Math.random()*6+1);
+		num=(int)(Math.random()*6+1);
 	}
 	void roll()
-	{
-		if (roll==1)
+	{	
+		if (num==1)
 		{
 			fill(255);
 			ellipse(dX+25,dY+25,10,10);
 		}
-		if (roll==2)
+		if (num==2)
 		{
 			fill(255);
 			ellipse(dX+10,dY+10,10,10);
 			ellipse(dX+40,dY+40,10,10);
 		}
-		if (roll==3)
+		if (num==3)
 		{
 			fill(255);
 			ellipse(dX+10,dY+10,10,10);
 			ellipse(dX+25,dY+25,10,10);
 			ellipse(dX+40,dY+40,10,10);
 		}
-		if (roll==4)
+		if (num==4)
 		{
 			fill(255);
 			ellipse(dX+10,dY+10,10,10);
@@ -61,15 +61,9 @@ class Die //models one single dice cube
 			ellipse(dX+40,dY+40,10,10);
 			ellipse(dX+40,dY+10,10,10);
 		}
-		if (roll==4)
-		{
-			fill(255);
-			ellipse(dX+10,dY+10,10,10);
-			ellipse(dX+10,dY+40,10,10);
-			ellipse(dX+40,dY+40,10,10);
-			ellipse(dX+40,dY+10,10,10);
-		}
-		if (roll==5)
+
+		
+		if (num==5)
 		{
 			fill(255);
 			ellipse(dX+10,dY+10,10,10);
@@ -78,7 +72,7 @@ class Die //models one single dice cube
 			ellipse(dX+40,dY+40,10,10);
 			ellipse(dX+40,dY+10,10,10);
 		}
-		if (roll==6)
+		if (num==6)
 		{
 			fill(255);
 			ellipse(dX+10,dY+10,10,10);
